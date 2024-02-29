@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="style" href=""
+    <title>My CV</title>
+
+    <style>
+        .year{
+            font-size: smaller;
+        }
+        .exp-list{
+            background-color: pink;
+        }
+        .exp-title{
+            font-size: large;
+            font-weight:bold;
+        }
+        .exp-detail{
+            list-style-type: circle;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: cornflowerblue;">
+        <h1>Tanapat Tanadka</h1>
+    </header>
+
+    <div class="summary" style="background-color: lightblue;">
+        <h2>Summary</h2>
+        <p>Hello World</p>
+    </div>
+    
+    <div class="education" style="background-color: lightblue;">
+        <h2>Education</h2>
+        <table style="background-color: aliceblue;">
+            <thead>
+                <th>Year</th>
+                <th>Educational Level</th>
+                <th>Institute</th>
+                <th>Major</th>
+                <th>Grade</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2004-2010</td>
+                    <td>Grade 1-6</td>
+                    <td>Patai udom suksa school</td>
+                    <td>Gifted program</td>
+                    <td>4.00</td>
+                </tr>
+                <tr>
+                    <td>2010-2013</td>
+                    <td>Grade 7-9</td>
+                    <td>Horwang school</td>
+                    <td>Intensive program</td>
+                    <td>3.89</td>
+                </tr>
+                <tr>
+                    <td>2013-2016</td>
+                    <td>Grade 10-12</td>
+                    <td>Triamudom suksa school</td>
+                    <td>Applied Science</td>
+                    <td>3.39</td>
+                </tr>
+                <tr>
+                    <td>2016-2020</td>
+                    <td>Barchelor's Degree</td>
+                    <td>Kasetsart University</td>
+                    <td>
+                        Electrical-Mechanical-Manufacturing Engineering <br/> 
+                        <small>(First class honors)</small>
+                    </td>
+                    <td>3.62</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="3">TOEIC</td>
+                <td>875</td>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="skills" style="background-color: lightblue;">
+        <h2>Career Skills</h2>
+        <ul>
+            <li>Computer Aids Design</li>
+            <p>Solidworks CAD/CAE Simulation, AutoCAD, SketchUP</p>
+            <li>PLC programming</li>
+            <li>Microcontroller programming</li>
+            <p>Arduino IDE, RaspberryPi, Jetson Nano</p>
+            <li>Robotic Programming</li>
+            <p>Denso SCARA robot, Fanuc articulated robot, UR cobot</p>
+            <li>Computer Vision & AI</li>
+            <p>OpenCV, Yolov5, MaskRCNN</p>
+            <li>Web Development</li>
+            <p>HTML, CSS, Javascript, SQL</p>
+            <li>Game Development</li>
+            <p>Unity, C#, Blender</p>
+        </ul>
+    </div>
+
+    <div class="experience" style="background-color: lightblue;">
+        <h2>Experience</h2>
+        <div class="japanese">
+            <p class="year">2018</p>
+            <p class="exp-title">1st place EV cup 2018 by NTSDA</p>
+        </div>
+        <div id="ev-cup" class="exp-list">
+            <p class="year">2018</p>
+            <p class="exp-title">1st place EV cup 2018 by NTSDA</p>
+            <p>
+                Anticipated as mechanical designer of the team.
+                <ul class="exp-detail">
+                    <li>Used SolidWorks CAD to designed chassis and frame.</li>
+                    <li>Used SolidWorks Simulation to calculate stress and torque by external forces act on the structure.</li>
+                </ul>
+            </p>
+        </div>
+        <div id="shibaura" class="exp-list">
+            <p class="year">Jun 2019 - Aug 2019</p>
+            <p class="exp-title">Internship at Shibaura Institute of Technology Japan</p>
+            <p>
+                Studied in Motion control laboratory.
+                <ul class="exp-detail">
+                    <li>Studied the principle of automation control using PID feedback control and made transfer functions of the mechanical and electrical system.</li>
+                    <li>Create the controlled system using Arduino and MATLAB.</li>
+                    <li>Observed the results, Adjust variable to the expected behavior.</li>
+                </ul>
+            </p>
+        </div>
+        <div id="cpf-farm" class="exp-list">
+            <p class="year">Dec 2019 - Sep 2021</p>
+            <p class="exp-title">Prototype Fabrication at CPF</p>
+            <p>
+                Worked at CPF as mechanical engineer and co project engineer.
+                <ul class="exp-detail">
+                    <li>Designed prototypes and made production drawing from conference's result via SolidWorks and AutoCAD.</li>
+                    <li>Simulated airflow to prove the concept via SolidWorks Flow simulation.</li>
+                    <li>Cooperated with the supplier in fabrication process according to the schedule.</li>
+                </ul>
+            </p>
+        </div>
+        <div id="cpf-robotic" class="exp-list">
+            <p class="year">Sep 2021 - Jan 2023</p>
+            <p class="exp-title">Robotic Technology at CPF</p>
+            <p>
+                Worked in the robotic technology team of CPF
+                Food production lines robot implementation.
+                <ul class="exp-detail">
+                    <li>Programed tool path and sequence of Denso SCARA robot.</li>
+                    <li>Wrote I/Os for PLC communication.</li>
+                </ul>
+                Product QA lines robot implementation.
+                <ul class="exp-detail">
+                    <li>Programed tool path and sequence of UR Cobot.</li>
+                    <li>Wrote API recieving data from smart camera.</li>
+                    <li>Mapped local network of the systems.</li>
+                    <li>Designed electrical circuit and the cobot I/Os.</li>
+                </ul>
+                Attended Fanuc robotic training course.
+                </p>
+        </div>
+        <div id="cpf-vision" class="exp-list">
+            <p class="year">Sep 2021 - Jan 2023</p>
+            <p class="exp-title">Computer Vision & AI at CPF</p>
+            <p>
+                Worked in the robotic technology team of CPF
+                <ul class="exp-detail">
+                    <li>Used YoloV5, an image recognition AI, to count eggs in the production using python on linux.</li>
+                    <ul class="exp-detail">
+                        <li>Collected data, trained custom model from few pretrains and adjusted variables for expected PR curve.</li>
+                        <li>Implemented real time object tracking and counting program. Intregrated the prototype conveyor system with an IoT switch.</li>
+                    </ul>
+                    <li>Used YoloV5 to seperate chick genders</li>
+                    <ul class="exp-detail">
+                        <li>Associated with another business unit in models comparison.</li>
+                        <li>Wrote Json-to-yolo convertor program for model comparison since having available data and labels from Ciracore. Checked the result and offered suggestions.</li>
+                    </ul>
+                    <li>Wrote defect detection program and server-client API for UR cobot on Omron smart camera.</li>
+                    <li>Wrote volume grading program on Keyence 3d camera and send data to PLC.</li>
+                    <li>Used pocketspinx, a speech-to-text AI, to control automatic door operation.</li>
+                </ul>
+                </p>
+        </div>
+    </div>
+
+    <footer style="background-color: papayawhip;">
+        <p>Copyright © Tanapat Tanadka.</p>
+    </footer>
+</body>
+</html>
