@@ -1,13 +1,22 @@
 let drumList = document.querySelectorAll(".set .drum");
 
 for (i=0; i<drumList.length; i++){
-    drumList[i].addEventListener("click", HandleClick);
+    drumList[i].addEventListener("click", function() {
+        let keyInput = this.innerHTML;
+        HandleSound(keyInput);
+        HandelAnimation(keyInput);
+    });
 }
 
-function HandleClick() {
-    let btn = this.innerHTML;
+document.addEventListener("keypress", function(e) {
+    HandleSound(e.key);
+    HandelAnimation(e.key);
+})
+
+function HandleSound(keyInput) {
     let audio = new Audio("./sounds/crash.mp3");
-    switch (btn){
+
+    switch (keyInput){
         case "w":
             audio = new Audio("./sounds/crash.mp3");
             audio.play();
@@ -40,4 +49,13 @@ function HandleClick() {
     }
     
 }
+
+function HandelAnimation(keyInput){
+    let activeButton = document.querySelector("." + keyInput);
+    activeButton.classList.add("pressed");
+    setTimeout(function() {
+        activeButton.classList.remove("pressed");
+    },100)
+}
+
 
