@@ -1,5 +1,4 @@
 let sequence = [];
-let currentLevel = 1;
 let level = 0;
 let noOfClick = 0;
 let gameStart = false;
@@ -15,7 +14,13 @@ for (let i = 0; i < buttonAmount; i++) {
 
 $(document).keypress(function(e) {
     if (!gameStart){
-        gameStart = !gameStart;
+        gameStart = true;
+        StartLevel();
+    }
+
+    if (gameOver){
+        Init();
+        gameStart = true;
         StartLevel();
     }
 });
@@ -38,16 +43,25 @@ $(".btn").click(function(e) {
     }
     else{
         gameOver = true;
-        $("h1").text("Game Over");
+        GameOverAnimationHandler();
+        $("h1").text("Game Over, Press Any Key to Restart");
         SoundHandler("wrong");
     }
-    
 
     if(IsCompleteSequence() && !gameOver){
         StartLevel();
         noOfClick = 0;
     }
 })
+
+function Init(){
+    sequence = [];
+    level = 0;
+    noOfClick = 0;
+    gameOver = false;
+    gamePreviewing = false;
+}
+
 
 function StartLevel(){
     sequence.push(GetRandom(4));
@@ -84,6 +98,13 @@ function ButtonAnimationHandler(input, callback = function() {}){
         btn.classList.remove("pressed");
         callback();
     }, 100)
+}
+
+function GameOverAnimationHandler(){
+    $(".container").classList.add("game-over");
+    setTimeout(function() {
+        $(".container").classList.remove("game-over");
+    }, 500)
 }
 
 function SoundHandler(index){
