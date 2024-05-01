@@ -48,3 +48,14 @@ $("h1").on("mouseover", function() {
 $("h1").on("mouseleave", function() {
     $("h1").css("color", "yellow");
 })
+
+//-----------------------------------------------------------------------
+
+$("h1").before("<button>new</button>");
+$("h1").after("<button>new</button>");
+$("h1").prepend("<button>new</button>");
+$("h1").append("<button>new</button>");
+
+// .hide() .show() .toggle() .fadeIn() .fadeOut() .fadeToggle()
+// .slideUp() .slideDown() .slideToggle()
+// .animate({opacity: 0.5})

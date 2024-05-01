@@ -101,9 +101,9 @@ function ButtonAnimationHandler(input, callback = function() {}){
 }
 
 function GameOverAnimationHandler(){
-    $(".container").classList.add("game-over");
+    $("body").addClass("game-over");
     setTimeout(function() {
-        $(".container").classList.remove("game-over");
+        $("body").removeClass("game-over");
     }, 500)
 }
 
