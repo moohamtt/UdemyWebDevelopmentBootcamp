@@ -15,7 +15,7 @@ const PASSWORD = "get-me-in";
 let userAutherized = false;
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(CheckPasswod);
+app.use(CheckPassword);
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html")
@@ -36,7 +36,7 @@ app.listen(port, () => {
     console.log(`Listening to port ${port}`);
 });
 
-function CheckPasswod(req, res, next){
+function CheckPassword(req, res, next){
     let inputPwd = req.body["password"];
     if (inputPwd === PASSWORD){
         userAutherized = true;
